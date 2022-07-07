@@ -1,0 +1,36 @@
+{
+  "name": "own_components",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "json": "^11.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "vite": "^2.9.9"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || 17.x || 18.x",
+    "react-dom": "^16.8.0 || 17.x || 18.x"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/own_components.umd.js",
+  "module": "./dist/own_components.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/own_components.es.js",
+      "require": "./dist/own_components.umd.js"
+    }
+  }
+}
